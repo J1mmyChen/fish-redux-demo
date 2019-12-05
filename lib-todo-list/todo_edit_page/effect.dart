@@ -3,7 +3,7 @@ import 'package:flutter/material.dart' hide Action;
 
 import '../global_store/action.dart';
 import '../global_store/store.dart';
-import './todo_component/component.dart';
+import '../todo_list_page/todo_component/component.dart';
 import 'action.dart';
 import 'state.dart';
 

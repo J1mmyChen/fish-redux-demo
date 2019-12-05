@@ -1,6 +1,6 @@
 import 'package:fish_redux/fish_redux.dart';
 
-import './todo_component/component.dart';
+import '../todo_list_page/todo_component/component.dart';
 import 'effect.dart';
 import 'state.dart';
 import 'view.dart';

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart' hide Action;
 import 'global_store/state.dart';
 import 'global_store/store.dart';
 import 'todo_edit_page/page.dart';
+import 'todo_list_page/page.dart';
 
 /// 创建应用的根 Widget
 /// 1. 创建一个简单的路由，并注册页面
@@ -12,6 +13,9 @@ import 'todo_edit_page/page.dart';
 Widget createApp() {
   final AbstractRoutes routes = PageRoutes(
     pages: <String, Page<Object, dynamic>>{
+      /// 注册TodoList主页面
+      'todo_list': ToDoListPage(),
+
       /// 注册Todo编辑页面
       'todo_edit': TodoEditPage(),
     },
@@ -70,7 +74,7 @@ Widget createApp() {
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-    home: routes.buildPage('todo_edit', null),
+    home: routes.buildPage('todo_list', null),
     onGenerateRoute: (RouteSettings settings) {
       return MaterialPageRoute<Object>(builder: (BuildContext context) {
         return routes.buildPage(settings.name, settings.arguments);
